@@ -4,3 +4,4 @@ scikit-learn
 dash==2.9.2
 plotly
 gunicorn
+openpyxl
