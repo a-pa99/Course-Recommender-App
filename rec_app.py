@@ -1,12 +1,11 @@
 from dash import Dash, dcc, html, Input, Output
-import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
 import pandas as pd
 import recco
 #import app3 #This is the py file that contains the reccomendation model in it.
 
 
-app = Dash(__name__, external_stylesheets=[dbc.themes.ZEPHYR])
+app = Dash(__name__)
 
 #this will connect app to render when we're ready
 server = app.server
@@ -51,12 +50,12 @@ def fig1(course_list):
     fig1 = go.Figure(data = [go.Table(
         header = dict(
             values=["<b>Course Recommendations</b>"],
-            #line_color='white', fill_color='white',
+            line_color='white', fill_color='white',
             align='center', font=dict(color='black', size=12),height=30
     ),
         cells=dict(
             values=[df['Course_Recommendations']],
-            #line_color=['#000000'], fill_color=['#3b5998'],
+            line_color=['#000000'], fill_color=['#3b5998'],
             align='center', font=dict(color='white', size=11), height=30))])
     
     return fig1
