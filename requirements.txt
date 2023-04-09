@@ -1,6 +1,6 @@
 pandas
 numpy
-sklearn==1.0.2
+sklearn
 dash==2.9.2
 dash_bootstrap_compnents==1.4.1
 plotly==5.6.0
