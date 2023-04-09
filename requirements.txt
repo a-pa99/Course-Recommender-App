@@ -2,5 +2,4 @@ pandas
 numpy
 sklearn
 dash==2.9.2
-dash_bootstrap_compnents==1.4.1
 plotly
