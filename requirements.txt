@@ -1,6 +1,6 @@
 pandas
 numpy
-sklearn==1.2.2
+scikit-learn
 dash==2.9.2
 plotly
 gunicorn
