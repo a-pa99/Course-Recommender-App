@@ -168,10 +168,6 @@ tfidf_df = pd.DataFrame(vectorized_data.toarray(), columns=tfidfvec.get_feature_
 
 tfidf_df.index = course_df['Title']
 
-cosine_similarity_array = cosine_similarity(tfidf_df)
-
-cosine_similarity_df = pd.DataFrame(cosine_similarity_array, columns=tfidf_df.index,index=tfidf_df.index)
-
 tfidfvec3 = TfidfVectorizer(
             lowercase = True, 
             ngram_range = (1,2), # include 2-word phrases
