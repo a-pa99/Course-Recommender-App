@@ -5,13 +5,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 import re
 
 udemy_df = pd.read_csv('udemy_master_df.csv', usecols = ['Title', 'Summary'])
-job_descriptions_df = pd.read_excel('Task_Statements.xlsx', usecols = ['Title', 'Task'])
+cosine_similarity_df = pd.read_pickle('cosine_similarity_df.pkl')
 
 udemy_df = udemy_df[udemy_df['Summary'].notna()]
 
-job_descriptions_df = job_descriptions_df.groupby(['Title'])['Task'].apply(','.join).reset_index()
-
-job_df = job_descriptions_df.copy()
 course_df = udemy_df.copy()
 
 course_df  = course_df.drop_duplicates()
